@@ -1,0 +1,6 @@
+numpy
+scikit-learn
+precommit
+flake8
+pytest
+reorder-python-imports
