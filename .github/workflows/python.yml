@@ -44,4 +44,4 @@ jobs: # A set of actions to be executed
     - name: Make imports pretty
       
       run: |
-        python -m reorder-python-imports main.py
+        reorder-python-imports main.py

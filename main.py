@@ -1,16 +1,14 @@
-import typing
-
-import numpy as np
-
-from sklearn.cluster import DBSCAN
-from sklearn import metrics
-from sklearn.datasets import make_blobs
-from sklearn.preprocessing import StandardScaler
-
 import os
 import sys
+import typing
 from time import time
+
 import matplotlib.pyplot as plt
+import numpy as np
+from sklearn import metrics
+from sklearn.cluster import DBSCAN
+from sklearn.datasets import make_blobs
+from sklearn.preprocessing import StandardScaler
 
 
 def scale_data(X: np.ndarray) -> np.ndarray:
