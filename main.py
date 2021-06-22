@@ -24,6 +24,7 @@ def get_data() -> Tuple[np.ndarray, np.ndarray]:
     X, labels = make_blobs(
         n_samples=750, centers=centers, cluster_std=0.4, random_state=0
     )
+
     return X, labels
 
 
