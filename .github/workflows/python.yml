@@ -36,5 +36,12 @@ jobs: # A set of actions to be executed
 
     # Run linting with flake8
     - name: Lint with flake8
+
       run: |
         python -m flake8
+
+    # Make imports prettier
+    - name: Make imports pretty
+      
+      run: |
+        python -m reorder-python-imports main.py
