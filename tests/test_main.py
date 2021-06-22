@@ -1,11 +1,11 @@
-import pytest  # noqa: F401
+import pytest
 from pathlib import Path
 import sys
 
 root_folder = Path.cwd().resolve().parent
 sys.path.insert(0, root_folder)
 
-from ..main import get_data  # noqa: E402 # no-reorder
+from ..main import get_data  # noqa: E402
 
 
 @pytest.fixture(scope="module")
