@@ -51,4 +51,4 @@ jobs: # A set of actions to be executed
     # Run tests
     - name: Unit testing
       working-directory: ./tests/
-      run: python -m pytest
+      run: pytest

@@ -8,6 +8,11 @@ from main import get_data  # noqa: E402
 
 
 @pytest.fixture(scope="module")
-def test_check_datatypes():
-    dataset = get_data()
-    assert dataset.shape[1] == 100
+def dataset():
+    X, labels = get_data()
+    return X
+
+
+def test_dataset_shapes(dataset):
+    assert len(dataset.shape) == 2
+    assert dataset.shape[0] == 750
