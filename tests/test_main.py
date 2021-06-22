@@ -3,9 +3,9 @@ from pathlib import Path
 import sys
 
 root_folder = Path.cwd().resolve().parent
-sys.path.insert(0, root_folder)
+sys.path.insert(root_folder, 0)
 
-from ..main import get_data  # noqa: E402
+from .main import get_data  # noqa: E402
 
 
 @pytest.fixture(scope="module")
