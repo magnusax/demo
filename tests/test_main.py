@@ -2,8 +2,8 @@ import pytest
 from pathlib import Path
 import sys
 
-root_folder = Path.cwd().resolve().parent
-sys.path.insert(root_folder, 0)
+root_folder = str(Path.cwd().resolve().parent)
+sys.path.insert(0, root_folder)
 
 from .main import get_data  # noqa: E402
 
