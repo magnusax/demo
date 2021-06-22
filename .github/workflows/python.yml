@@ -45,3 +45,7 @@ jobs: # A set of actions to be executed
       
       run: |
         reorder-python-imports main.py
+
+    # Apply type checking
+    - name: Run static type checker
+      run: python -m mypy
