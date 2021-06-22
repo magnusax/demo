@@ -49,3 +49,8 @@ jobs: # A set of actions to be executed
     # Apply type checking
     - name: Run static type checker
       run: python -m mypy
+
+    # Run tests
+    - name: Unit testing
+      working-directory: ./tests/
+      run: python -m pytest

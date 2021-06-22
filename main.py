@@ -1,6 +1,6 @@
 import os
 import sys
-import typing
+from typing import Tuple
 from time import time
 
 import matplotlib.pyplot as plt
@@ -12,7 +12,18 @@ from sklearn.preprocessing import StandardScaler
 
 
 def scale_data(X: np.ndarray) -> np.ndarray:
+    """Scale input data"""
     return StandardScaler().fit_transform(X)
+
+
+def get_data() -> Tuple[np.ndarray, np.ndarray]:
+    """Get dummy data"""
+    centers = [[1, 1], [-1, -1], [1, -1]]
+
+    X, labels = make_blobs(
+        n_samples=750, centers=centers, cluster_std=0.4, random_state=0
+    )
+    return X, labels
 
 
 def main():
@@ -20,11 +31,7 @@ def main():
     My main function
     """
 
-    centers = [[1, 1], [-1, -1], [1, -1]]
-
-    X, labels_true = make_blobs(
-        n_samples=750, centers=centers, cluster_std=0.4, random_state=0
-    )
+    X, labels_true = get_data()
 
     X = scale_data(X)
 
