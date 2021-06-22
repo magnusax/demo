@@ -1,8 +1,8 @@
 # noreorder
 import os
 import sys
-from typing import Tuple
 from time import time
+from typing import Tuple
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -30,7 +30,7 @@ def get_data() -> Tuple[np.ndarray, np.ndarray]:
 
 def main():
     """
-    My main function
+    My main function, with docstring.
     """
 
     X, labels_true = get_data()
