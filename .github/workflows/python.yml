@@ -34,17 +34,15 @@ jobs: # A set of actions to be executed
         python -m pip install --upgrade pip
         python -m pip install -r requirements-dev.txt
 
-    # Run linting with flake8
-    - name: Lint with flake8
-
-      run: |
-        python -m flake8
-
     # Make imports prettier
-    - name: Make imports pretty
-      
+    - name: Make imports pretty        
       run: |
         reorder-python-imports main.py
+
+    # Run linting with flake8
+    - name: Lint with flake8
+      run: |
+        python -m flake8
 
     # Apply type checking
     - name: Run static type checker
